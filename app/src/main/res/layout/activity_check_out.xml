@@ -106,7 +106,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bt_background"
-                android:text="Add to list"
+                android:text="Pay"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="14dp" />
