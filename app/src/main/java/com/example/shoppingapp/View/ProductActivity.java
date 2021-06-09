@@ -14,8 +14,9 @@ import com.example.shoppingapp.R;
 
 public class ProductActivity extends AppCompatActivity {
 
-    private String name, price, description;
+    private String name, description;
     private int image;
+    private float price;
     private TextView mName, mPrice, mDescription;
     private ImageView mImage;
     private Button add;
@@ -35,7 +36,7 @@ public class ProductActivity extends AppCompatActivity {
         Intent intent = getIntent();
         sharedPreferences = getSharedPreferences(SHARE,MODE_PRIVATE);
         name = intent.getStringExtra("name");
-        price = intent.getStringExtra("price");
+        price = intent.getFloatExtra("price",0);
         description = intent.getStringExtra("dec");
         image = intent.getIntExtra("image",R.drawable.realmadrid_w);
 
@@ -48,7 +49,7 @@ public class ProductActivity extends AppCompatActivity {
         add = findViewById(R.id.button);
 
         mName.setText(name);
-        mPrice.setText(price);
+        mPrice.setText(price +" €");
         mImage.setImageResource(image);
         mDescription.setText(description);
 
@@ -59,7 +60,7 @@ public class ProductActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString(keyname,name);
-                editor.putString(keyprice,price);
+                editor.putFloat(keyprice,price);
                 editor.putInt(keyImage,image);
                 editor.apply();
 
