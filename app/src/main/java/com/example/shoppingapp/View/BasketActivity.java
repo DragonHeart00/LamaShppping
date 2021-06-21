@@ -32,8 +32,6 @@ public class BasketActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basket);
 
-
-
         checkout = findViewById(R.id.delete_all);
         mName = findViewById(R.id.namepro);
         mPrice = findViewById(R.id.price);
