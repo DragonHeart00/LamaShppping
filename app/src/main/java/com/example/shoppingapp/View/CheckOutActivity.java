@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.shoppingapp.R;
@@ -14,7 +15,7 @@ import com.example.shoppingapp.R;
 public class CheckOutActivity extends AppCompatActivity {
 
     Button payId;
-    TextView cardNumber, nameOnCard, expiryMonth, expiryYear, cvv;
+    EditText cardNumber, nameOnCard, expiryMonth, expiryYear, cvv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
